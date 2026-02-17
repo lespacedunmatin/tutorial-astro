@@ -1,5 +1,5 @@
 ---
-
+const pageTitle = "About Me";
 ---
 
 <html lang="en">
@@ -9,7 +9,7 @@
     <link rel="icon" href="/favicon.ico"/>
     <meta name="viewport" content="width=device-width"/>
     <meta name="generator" content={Astro.generator}/>
-    <title>About – Astro</title>
+    <title>{pageTitle} – Astro</title>
 </head>
 <body>
 <nav>
@@ -19,7 +19,7 @@
         <li><a href="/blog/">Blog</a></li>
     </ul>
 </nav>
-<h1>About Me</h1>
+<h1>{pageTitle}</h1>
 <h2>… and my new Astro site!</h2>
 
 <p>I am working through Astro's introductory tutorial. This is the second page on my website, and it's the first one
