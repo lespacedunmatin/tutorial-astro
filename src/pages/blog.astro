@@ -8,15 +8,6 @@ const allPosts = Object.values(import.meta.glob('./posts/*.md', {eager: true}));
 
 const pageTitle = "My Astro Learning Blog";
 ---
-<style is:global>
-    .blogPostImage {
-        width: 100px;
-        float: left;
-    }
-    li {
-        clear: both;
-    }
-</style>
 <BaseLayout pageTitle={pageTitle} currentPage="Blog">
     <p>This is where I will post about my journey learning Astro.</p>
 

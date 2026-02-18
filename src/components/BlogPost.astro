@@ -1,6 +1,15 @@
 ---
 const { url, data } = Astro.props;
 ---
+<style is:global>
+    .blogPostImage {
+        width: 100px;
+        float: left;
+    }
+    li {
+        clear: both;
+    }
+</style>
 <li>
     <img src={data.image.url} width="100" alt={data.image.alt} class="blogPostImage" />
     <h2><a href={url}>{data.title}
