@@ -1,12 +1,18 @@
 ---
-const platform = "github";
-const username = "lespacedunmatin";
+import Social from "./Social.astro";
 ---
+<style>
+    footer {
+        display: flex;
+        gap: 1rem;
+        margin-top: 2rem;
+    }
+</style>
 
 <footer>
     <ul>
-        <li>Learn more about my projects on <a href={`https://www.${platform}.com/${username}`}>{platform}</a>!</li>
-        <li>Learn more about me on <a href="https://www.linkedin.com/in/olivierg/">LinkedIn</a></li>
+        <li><Social platform="github" username="lespacedunmatin" subject="my projects" /></li>
+        <li><Social platform="linkedin" username="in/olivierg" subject="me" /></li>
         <li>Contact me on <a href="https://bsky.app/profile/lespacedunmatin.bsky.social">Bluesky</a> or <a
                 href="https://piaille.fr/@lespacedunmatin">Mastodon</a></li>
     </ul>
