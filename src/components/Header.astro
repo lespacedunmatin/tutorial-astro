@@ -1,8 +1,10 @@
 ---
+import MenuButton from './MenuButton.astro';
 import Navigation from './Navigation.astro';
 
 const { currentPage } = Astro.props;
 ---
+<MenuButton />
 <header>
     <nav>
         <Navigation currentPage={currentPage} />
