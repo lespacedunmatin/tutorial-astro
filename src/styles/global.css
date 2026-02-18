@@ -79,3 +79,10 @@ h1 {
         display: none;
     }
 }
+
+/* Blog post styles */
+.blogPostImage {
+    width: 300px;
+    float: left;
+    margin: 0 1rem 1rem 0;
+}

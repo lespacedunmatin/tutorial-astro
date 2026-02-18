@@ -3,17 +3,10 @@ import BaseLayout from './BaseLayout.astro';
 const { frontmatter } = Astro.props;
 ---
 <BaseLayout pageTitle={frontmatter.title} currentPage="Blog">
-<style>
-    .blopPostImage {
-        width: 300px;
-        float: left;
-        margin: 0 1rem 1rem 0;
-    }
-</style>
 <p>Written by {frontmatter.author}</p>
 <p>Published on: {frontmatter.pubDate.toString().slice(0,10)}</p>
 <p><em>{frontmatter.description}</em></p>
-<img src={frontmatter.image.url} width="300" alt={frontmatter.image.alt} class="blopPostImage" />
+<img src={frontmatter.image.url} width="300" alt={frontmatter.image.alt} class="blogPostImage" />
 
 <slot />
 </BaseLayout>

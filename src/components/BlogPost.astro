@@ -1,0 +1,9 @@
+---
+const { url, data } = Astro.props;
+---
+<li>
+    <img src={data.image.url} width="100" alt={data.image.alt} class="blogPostImage" />
+    <h2><a href={url}>{data.title}
+        – {data.pubDate.toString().slice(0, 10)}</a></h2>
+    <p>{data.description}</p>
+</li>
