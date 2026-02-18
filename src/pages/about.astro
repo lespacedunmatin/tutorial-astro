@@ -24,14 +24,7 @@ const fontWeight = "bold";
 const textCase = "uppercase";
 ---
 
-<html lang="en">
-<head>
-    <meta charset="utf-8"/>
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg"/>
-    <link rel="icon" href="/favicon.ico"/>
-    <meta name="viewport" content="width=device-width"/>
-    <meta name="generator" content={Astro.generator}/>
-    <title>{pageTitle} – Astro</title>
+<BaseLayout pageTitle={pageTitle} currentPage="About">
     <style define:vars={{skillColor, fontWeight, textCase}}>
         h1 {
             color: purple;
@@ -44,9 +37,6 @@ const textCase = "uppercase";
             text-transform: var(--textCase);
         }
     </style>
-</head>
-<body>
-<BaseLayout pageTitle={pageTitle} currentPage="About">
     <h2>My awesome blog subtitle</h2>
 
     <h2>… and my new Astro site!</h2>
@@ -75,5 +65,3 @@ const textCase = "uppercase";
 
     {goal === 3 ? <p>My goal is to finish in 3 days.</p> : <p>My goal is not 3 days.</p>}
 </BaseLayout>
-</body>
-</html>
