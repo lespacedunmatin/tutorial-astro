@@ -1,10 +1,11 @@
 ---
+import {getCollection} from 'astro:content';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import '../styles/global.css';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import BlogPost from '../components/BlogPost.astro';
-const allPosts = Object.values(import.meta.glob('./posts/*.md', {eager: true}));
+const allPosts = await getCollection("blog");
 
 const pageTitle = "My Astro Learning Blog";
 ---
@@ -13,7 +14,7 @@ const pageTitle = "My Astro Learning Blog";
 
     <ol reversed>
       {allPosts.reverse().map((post: any) =>
-        <BlogPost url={post.url} data={post.frontmatter} />
+        <BlogPost url={`/posts/${post.id}/`} data={post.data} />
       )}
     </ol>
 </BaseLayout>
